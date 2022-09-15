@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 const Login = (props) => {
@@ -60,7 +61,7 @@ const Login = (props) => {
                 <td colSpan={2} style={{ fontSize: '1.5vw' }} >Show Password<input onChange={handleShow} checked={passType} type="checkbox" className="form-check-input" style={{ padding: '0.5vw', marginLeft: '1vw' }} id="passType" /></td>
               </tr>
               <tr>
-                <td colSpan={2} style={{ fontSize: '1.5vw', lineHeight: '0.2vw' }} id='link1' ><a onClick={() => { goToPhone('customer') }} className="link-warning hovPoint">New here? Create an account</a></td>
+                <td colSpan={2} style={{ fontSize: '1.5vw', lineHeight: '0.2vw' }} id='link1' ><a onClick={() =>  {<Link className="nav-link active" to={"/register"}></Link> }} className="link-warning hovPoint">New here? Create an account</a></td>
               </tr>
               <tr>
                 <td colSpan="2"><button type="button" className="btn btn-warning" onClick={handleLogin} style={{ fontSize: '2vw', padding: '0vw 1vw' }}>Login</button></td>
